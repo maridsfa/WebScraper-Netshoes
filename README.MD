@@ -14,8 +14,8 @@ Extrair os seguintes dados de uma página de produto:
 
 ## 🛠️ Tecnologias Utilizadas
 
- - **VSCode + Extension Pack for Java** 
-- **Java 8+**
+- **VSCode + Extension Pack for Java** 
+- **Java 8+ (JDK)**
 - **Jsoup 1.17.2**
 
 ---
@@ -26,17 +26,21 @@ Extrair os seguintes dados de uma página de produto:
 ```bash
 git clone https://github.com/maridsfa/webscraper-netshoes.git
 cd webscraper-netshoes
-
+```
 
 ### 2. Verifique as versões das tecnologias utilizadas 
-Execute no seu terminal os comandos: `java -version` e `git --version`
+Execute no seu terminal os comandos:
+```bash
+java -version
+git --version
+```
 
-### 3. Execute
-No editor de código VSCode, execute o arquivo Main.java
----
+### 3. Execute o código no compilador
+No editor de código VSCode, execute o arquivo Main.java.
 
-### Exemplo de saída
 
+### 💻 Exemplo de saída
+```bash
 - Nome do produto: Tênis Asics Gel-Equation 14 Feminino - Roxo+Rosa  
 - Preço: R$ 449,99  
 - URL da imagem: https://static.netshoes.com.br/produtos/tenis-asics-gel-equation-14-feminino/97/2FW-2956-997/2FW-2956-997_zoom1.jpg?ts=1747322820&ims=544x 
@@ -47,3 +51,4 @@ No editor de código VSCode, execute o arquivo Main.java
   - Material: Têxtil  
   - Placa: Não Possui  
   - Tecnologia: AmpliFoam, Gel, AHAR
+```
