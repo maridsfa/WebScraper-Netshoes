@@ -8,12 +8,17 @@ import org.jsoup.select.Elements;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Scraper {
-    
-    public Produto extrairProduto(String url) {
+public class NetshoesScraper {
+
+    private String urlBase = "https://www.netshoes.com.br/p/";
+
+    public Produto extrairProduto(String url_produto) {
 
         try {
-            Document document = Jsoup.connect(url).get();
+
+            String search_url = urlBase + url_produto;
+
+            Document document = Jsoup.connect(search_url).get();
 
             // Nome do produto
             Element nomeElement = document.selectFirst("h1.product-name");
