@@ -18,6 +18,7 @@ public class Produto {
         this.descricao = descricao;
     }
 
+    //GETTERS
     public String getTitulo() {
         return titulo;
     }

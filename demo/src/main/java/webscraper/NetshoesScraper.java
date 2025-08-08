@@ -10,15 +10,11 @@ import java.util.List;
 
 public class NetshoesScraper {
 
-    private String urlBase = "https://www.netshoes.com.br/p/";
-
-    public Produto extrairProduto(String url_produto) {
+    public Produto extrairProduto(String url_search) {
 
         try {
 
-            String search_url = urlBase + url_produto;
-
-            Document document = Jsoup.connect(search_url).get();
+            Document document = Jsoup.connect(url_search).get();
 
             // Nome do produto
             Element nomeElement = document.selectFirst("h1.product-name");
@@ -56,8 +52,7 @@ public class NetshoesScraper {
             for (Element atributo : descricoes) {
                 descricaoList.add(atributo.text());
             }
-
-            // Verifica se a lista de descrições está vazia
+            // Verifica se a lista de descrições está vazia - melhoria para verificação de cada elemento separadamente
             if (descricaoList.isEmpty()) {
                     descricaoList.add("Descrição não encontrada");
             }
